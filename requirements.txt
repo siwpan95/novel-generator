@@ -1,0 +1,3 @@
+# novel_generator dependencies (auto-generated 2026-08-20)
+pytest
+# local deps (sibling projects, not pip): novel_generator

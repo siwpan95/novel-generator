@@ -1,0 +1,62 @@
+{
+  "_comment": "伏笔词库：接通 plot_state 伏笔 API 到活动生成路径。planting_beats 为埋设节拍，seeds 为各节拍可埋的伏笔种子（洗牌发牌取唯一）。recovery_offset 为[最早,最晚]回收章偏移，recovery_text 为回收章写进正文的呼应句。",
+  "planting_beats": ["theme", "inciting", "break_1", "midpoint"],
+  "seeds": {
+    "theme": [
+      {
+        "id": "fs_protocol_appendix",
+        "content": "墟核在他掌心投出一份《协议附录》，第三条被涂抹的痕迹比正文更刺眼——他没有急着读，先把它记进了归墟核心。",
+        "recovery_offset": [4, 9],
+        "recovery_text": "那份被涂抹的《协议附录》第三条，此刻在归墟核心里重新显形：原来那一行写的是——「锚定者可被替换」。"
+      },
+      {
+        "id": "fs_void_echo",
+        "content": "他听见虚空里有回声，像另一个自己隔着很厚的墙在说话，墙那边的人似乎也卡在某个循环里。",
+        "recovery_offset": [5, 10],
+        "recovery_text": "虚空的回声又响了一次——这一次他听懂了：那是第47次循环里，前一个林朔留给自己的警告。"
+      }
+    ],
+    "inciting": [
+      {
+        "id": "fs_player_cost",
+        "content": "第一个玩家真正降临的代价，是归墟核心悄悄多出了一道裂纹——当时没有人注意到，连墟核都装作没看见。",
+        "recovery_offset": [4, 8],
+        "recovery_text": "归墟核心那道裂纹又张开了。它从不真正愈合，只是等下一个玩家降临，再咬一口。"
+      },
+      {
+        "id": "fs_gm_gray_cmd",
+        "content": "林朔点开GM面板时，发现自己的权限列表最底下有一行从未见过的灰色指令，标签是乱码。",
+        "recovery_offset": [5, 9],
+        "recovery_text": "那行灰色指令终于解开了乱码——它只有一个作用：把当前锚定者，重置回第一天的起点。"
+      }
+    ],
+    "break_1": [
+      {
+        "id": "fs_fragment_memory",
+        "content": "碎片记忆在他眼前展开，里面那张脸他看了半天才认出——是年轻的自己，只是眼神比现在干净太多。",
+        "recovery_offset": [4, 9],
+        "recovery_text": "那张碎片里的脸又浮上来。他终于确认：那是第47次循环开头的林朔，还没被任何真相磨过。"
+      },
+      {
+        "id": "fs_baiye_trace",
+        "content": "数据流的缝隙里藏着一道极淡的痕迹，像有人反复来过又反复抹去——他第一次觉得，自己不是唯一的守望者。",
+        "recovery_offset": [5, 10],
+        "recovery_text": "那道被反复抹去的痕迹，此刻拼出了一个名字：白夜。原来早在林朔之前，就有人守在这里。"
+      }
+    ],
+    "midpoint": [
+      {
+        "id": "fs_star_map_flicker",
+        "content": "归墟星图亮起十二个光点，其中一个在不安地闪烁，像一盏快要熄灭的灯，又像一盏被人掐住喉咙的灯。",
+        "recovery_offset": [3, 7],
+        "recovery_text": "星图上那盏闪烁的灯，终于灭了一瞬——对应世界里，第一个碎片刚刚被「祂们」提前取走。"
+      },
+      {
+        "id": "fs_core_breath_sync",
+        "content": "归墟核心的呼吸，和一枚尚未回收的碎片能量曲线，慢半拍地同频了一下——像两个本该无关的东西，被同一根线牵着。",
+        "recovery_offset": [4, 9],
+        "recovery_text": "核心与碎片的同频不再是错觉。它只说明一件事：林朔自己，就是那根牵线的手。"
+      }
+    ]
+  }
+}
