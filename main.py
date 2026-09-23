@@ -12,7 +12,7 @@ import sys
 import os
 
 # 将父目录和项目根目录都加入 sys.path，兼容直接 python main.py 运行
-# 2026-09-28 去本地化：两个路径均由本文件位置推导，不再写死旧盘符绝对路径
+# 2026-09-23 去本地化：两个路径均由本文件位置推导，不再写死旧盘符绝对路径
 _project_root = os.path.dirname(os.path.abspath(__file__))
 _parent_dir = os.path.dirname(_project_root)
 sys.path.insert(0, _parent_dir)      # 上级目录 → import novel_generator.xxx
