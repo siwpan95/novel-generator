@@ -17,6 +17,10 @@ _project_root = os.path.dirname(os.path.abspath(__file__))
 _parent_dir = os.path.dirname(_project_root)
 sys.path.insert(0, _parent_dir)      # 上级目录 → import novel_generator.xxx
 sys.path.insert(0, _project_root)    # 本仓根 → import engine.xxx
+# 2026-09-23 修复：仓目录名（novel-generator）≠ 包名（novel_generator），
+# 先用 pkg_alias 把仓根注册成 novel_generator 包，下面的 from novel_generator... 才能导入。
+import pkg_alias
+pkg_alias.install()
 
 from novel_generator.engine.generators.novel import NovelGenerator
 from novel_generator.engine.generators.character import CharacterGenerator

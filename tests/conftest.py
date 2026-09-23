@@ -7,7 +7,12 @@ import tempfile
 import pytest
 
 # 将项目根目录加入 sys.path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+# 2026-09-23 修复：原来插入的是「仓根的上两级」（G:\），而包名 novel_generator 并不在那个目录下，
+# 故 from novel_generator... 必然失败。改为：插入仓根 + 用 pkg_alias 注册包别名（与 main.py 同一套做法）。
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, _ROOT)
+import pkg_alias  # noqa: E402
+pkg_alias.install()
 
 from novel_generator.engine.word_bank import WordBank
 from novel_generator.engine.context_manager import ContextManager
