@@ -12,10 +12,11 @@ import sys
 import os
 
 # 将父目录和项目根目录都加入 sys.path，兼容直接 python main.py 运行
+# 2026-09-28 去本地化：两个路径均由本文件位置推导，不再写死旧盘符绝对路径
 _project_root = os.path.dirname(os.path.abspath(__file__))
 _parent_dir = os.path.dirname(_project_root)
-sys.path.insert(0, _parent_dir)      # g:\  → import novel_generator.xxx
-sys.path.insert(0, _project_root)    # g:\novel_generator\ → import engine.xxx
+sys.path.insert(0, _parent_dir)      # 上级目录 → import novel_generator.xxx
+sys.path.insert(0, _project_root)    # 本仓根 → import engine.xxx
 
 from novel_generator.engine.generators.novel import NovelGenerator
 from novel_generator.engine.generators.character import CharacterGenerator
