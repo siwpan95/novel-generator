@@ -1,5 +1,7 @@
 # novel_generator
 
+> 仓库：<https://gitee.com/siwpan/novel-generator> ｜ 许可：MIT（见 [LICENSE](LICENSE)）
+
 **ASP 模板流中文小说自动生成引擎**：基于多层嵌套循环 + 词库随机替换，可离线生成单章、整卷乃至全本小说。
 
 ## 语言 / 类型
