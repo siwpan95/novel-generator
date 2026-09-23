@@ -1,6 +1,6 @@
 ---
 name: novel-generator-asp
-description: Maintain the novel_generator ASP template novel engine (G:/ai/novel_generator). Pure-stdlib offline novel generation.
+description: Maintain the novel_generator ASP template novel engine (本 SKILL.md 所在仓库根). Pure-stdlib offline novel generation.
 agent_created: true
 ---
 
