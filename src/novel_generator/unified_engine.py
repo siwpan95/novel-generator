@@ -27,19 +27,19 @@ import time
 from pathlib import Path
 from typing import Optional
 
-from engine.word_bank import WordBank
-from engine.template import TemplateEngine
-from engine.tracery_grammar import TraceryAdapter
-from engine.multi_layer_engine import MultiLayerEngine
-from engine.flash_marker import FlashMarker
-from engine.structure_framework import StructureFramework
-from engine.monster_generator import MonsterGenerator
-from engine.batch_writer import BatchWriter, BatchConfig
-from engine.sentence_rhythm import SentenceRhythmEngine, ChapterRhythmOrchestrator
-from engine.context_manager import ContextManager
-from engine.narrative_constraints import NarrativeConstraintEngine
-from engine.character_drive import InteractionEngine
-from engine.generators import (
+from novel_generator.engine.word_bank import WordBank
+from novel_generator.engine.template import TemplateEngine
+from novel_generator.engine.tracery_grammar import TraceryAdapter
+from novel_generator.engine.multi_layer_engine import MultiLayerEngine
+from novel_generator.engine.flash_marker import FlashMarker
+from novel_generator.engine.structure_framework import StructureFramework
+from novel_generator.engine.monster_generator import MonsterGenerator
+from novel_generator.engine.batch_writer import BatchWriter, BatchConfig
+from novel_generator.engine.sentence_rhythm import SentenceRhythmEngine, ChapterRhythmOrchestrator
+from novel_generator.engine.context_manager import ContextManager
+from novel_generator.engine.narrative_constraints import NarrativeConstraintEngine
+from novel_generator.engine.character_drive import InteractionEngine
+from novel_generator.engine.generators import (
     NovelGenerator, ChapterGenerator, VolumeGenerator,
     CharacterGenerator, BattleGenerator, DialogueGenerator
 )

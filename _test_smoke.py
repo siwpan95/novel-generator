@@ -1,11 +1,11 @@
 """快速冒烟测试"""
 import sys
-sys.path.insert(0, '.')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
-from engine.word_bank import WordBank
-from engine.template import TemplateEngine
-from engine.context_manager import ContextManager
-from engine.sentence_rhythm import SentenceRhythmEngine, ChapterRhythmOrchestrator
+from novel_generator.engine.word_bank import WordBank
+from novel_generator.engine.template import TemplateEngine
+from novel_generator.engine.context_manager import ContextManager
+from novel_generator.engine.sentence_rhythm import SentenceRhythmEngine, ChapterRhythmOrchestrator
 
 # Test 1: WordBank enhancements
 print("=== Test 1: WordBank ===")

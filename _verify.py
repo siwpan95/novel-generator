@@ -3,14 +3,14 @@ import sys
 import io
 # 修复GBK编码问题
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-sys.path.insert(0, '.')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
-from engine.word_bank import WordBank
-from engine.template import TemplateEngine
-from engine.context_manager import ContextManager
-from engine.sentence_rhythm import SentenceRhythmEngine
-from engine.tracery_grammar import TraceryAdapter
-from unified_engine import ASPNovelEngine
+from novel_generator.engine.word_bank import WordBank
+from novel_generator.engine.template import TemplateEngine
+from novel_generator.engine.context_manager import ContextManager
+from novel_generator.engine.sentence_rhythm import SentenceRhythmEngine
+from novel_generator.engine.tracery_grammar import TraceryAdapter
+from novel_generator.unified_engine import ASPNovelEngine
 
 # 1. 模板引擎 + Tracery
 print('=== Test 1: Template + Tracery ===')

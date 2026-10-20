@@ -11,16 +11,9 @@ import argparse
 import sys
 import os
 
-# 将父目录和项目根目录都加入 sys.path，兼容直接 python main.py 运行
-# 2026-09-23 去本地化：两个路径均由本文件位置推导，不再写死旧盘符绝对路径
+# src 布局：包位于 src/novel_generator/，把 src 加入 sys.path 后可直接 python main.py
 _project_root = os.path.dirname(os.path.abspath(__file__))
-_parent_dir = os.path.dirname(_project_root)
-sys.path.insert(0, _parent_dir)      # 上级目录 → import novel_generator.xxx
-sys.path.insert(0, _project_root)    # 本仓根 → import engine.xxx
-# 2026-09-23 修复：仓目录名（novel-generator）≠ 包名（novel_generator），
-# 先用 pkg_alias 把仓根注册成 novel_generator 包，下面的 from novel_generator... 才能导入。
-import pkg_alias
-pkg_alias.install()
+sys.path.insert(0, os.path.join(_project_root, "src"))
 
 from novel_generator.engine.generators.novel import NovelGenerator
 from novel_generator.engine.generators.character import CharacterGenerator

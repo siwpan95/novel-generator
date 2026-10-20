@@ -1,18 +1,48 @@
 [build-system]
 requires = ["setuptools>=61.0"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "novel_generator"
+name = "novel-generator"
 version = "2.0.0"
-description = "ASP 模板流小说自动生成引擎 —— 多层嵌套循环 + 词库随机替换"
-authors = [{name = "ASP Team"}]
+description = "ASP 模板流中文小说自动生成引擎 —— 多层嵌套循环 + 词库随机替换，纯标准库、可离线生成单章/整卷/全本"
 readme = "README.md"
 requires-python = ">=3.9"
-license = {text = "MIT"}
+license = { text = "MIT" }
+authors = [{ name = "siwpan" }]
+keywords = ["novel", "procedural-generation", "template", "word-bank", "chinese-novel", "asp"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Text Processing :: Linguistic",
+]
 
+[project.urls]
+Homepage = "https://gitee.com/siwpan/novel-generator"
+Repository = "https://gitee.com/siwpan/novel-generator"
+Issues = "https://gitee.com/siwpan/novel-generator/issues"
+
+# 发行名 novel-generator（连字符），导入名 novel_generator（下划线）。
 [project.scripts]
 novel-gen = "novel_generator.unified_engine:main"
 
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
 [tool.setuptools.packages.find]
-include = ["novel_generator*"]
+where = ["src"]
+# engine/output 是历史生成产物（9MB txt），不是包，也不应进 wheel。
+exclude = ["novel_generator.engine.output"]
+
+[tool.setuptools.package-data]
+novel_generator = ["word_banks/*.json"]
