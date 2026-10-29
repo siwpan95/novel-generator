@@ -1,5 +1,12 @@
 # novel_generator
 
+## 仓库角色定位（投资组合分级 ②）
+
+> 本仓在 siwpan 投资组合（D:/projects/repos，共 133 仓）中定级为 **② 保留**，领域 **小说/网文**。
+> **角色**：小说库。
+> **维护策略**：② 旗舰 / 枢纽仓库打磨保留，作为能力展示或收敛点；② 保留类仓库低优先维持、不主动扩张。
+> 投资组合统一分级索引：`D:/projects/repos/PORTFOLIO_TIERING.md`。
+
 [![PyPI](https://img.shields.io/pypi/v/novel-generator.svg)](https://pypi.org/project/novel-generator/)
 [![Python](https://img.shields.io/pypi/pyversions/novel-generator.svg)](https://pypi.org/project/novel-generator/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
